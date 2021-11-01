@@ -15,10 +15,21 @@ namespace _20211027_QueueList
             queueList.Put(10);
             queueList.Put(20);
             queueList.Put(30);
+            queueList.Put(40);
 
-            Console.WriteLine(queueList.GetData());
-            Console.WriteLine(queueList.GetData());
-            Console.WriteLine(queueList.GetData());
+            //Console.WriteLine(queueList.GetData());
+            //Console.WriteLine(queueList.GetData());
+            //Console.WriteLine(queueList.GetData());
+            //Console.WriteLine(queueList.GetData());
+
+            foreach (object item in queueList)
+            {
+                Console.WriteLine(item);
+                if(item is Entry data)
+                {
+                    Console.WriteLine(data.Data);
+                }
+            }
 
             Console.ReadKey();
         }
